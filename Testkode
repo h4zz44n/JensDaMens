@@ -1,0 +1,18 @@
+import math
+tall = [6,9,20]
+maxLete = 1000
+muligheter = list(range(1,maxLete))
+
+
+stopp = []
+for element in tall:
+    stopp.append(math.floor(maxLete/element))
+
+for a in range(stopp[0]):
+    for b in range(stopp[1]):
+        for c in range(stopp[2]):
+            tallet = a*tall[0]+b*tall[1]+c*tall[2]
+            if tallet in muligheter:
+                muligheter.remove(tallet)
+                #print(tallet)
+print(muligheter)
